@@ -62,6 +62,9 @@ export function New() {
       return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adicionar ou deixe o campo vázio")
     }
 
+    
+    alert("Nota Criada com sucesso!");
+    navigate(-1);
 
     await api.post("/notes", {
       title,
@@ -69,9 +72,6 @@ export function New() {
       links,
       tags,
     });
-
-    alert("Nota Criada com sucesso!");
-    navigate(-1);
   }
 
  return (
